@@ -28,14 +28,15 @@ $(document).ready(function(){
 	});
 
 	$(document).on("click", ".btn-danger",function(){
-		$(this).parent().parent().fadeTo('slow',0);
-		$(this).parent().parent().remove();
+		$(this).parent().parent().fadeOut('slow'), function(){
+			$(this).remove();
+		};
 		calTotalPrice();
 	});
 			
 	var addNewitem=function(newItemName,newItemPrice){
 		newItemPrice=parseFloat(newItemPrice).toFixed(2);
-		$("#itemList").append('<div class="itemRow col-xs-12">\
+		$('<div class="itemRow col-xs-12">\
 			<div class="itemName col-xs-3">'+newItemName+'</div>\
 		<div class="itemPrice col-xs-3">$'+newItemPrice+'</div>\
 		<div class="itemQuantity col-xs-3">\
@@ -46,7 +47,7 @@ $(document).ready(function(){
 		<div class="cancelButton col-xs-1">\
 			<button type="button" class="btn btn-danger">Remove</button>\
 		</div>\
-		</div>');
+		</div>').appendTo('#itemList').hide().fadeIn(1000);
 	};
 			
 	$(".addButton button").click(function(){
