@@ -47,13 +47,13 @@ $(document).ready(function(){
 		<div class="cancelButton col-xs-1">\
 			<button type="button" class="btn btn-danger">Remove</button>\
 		</div>\
-		</div>').appendTo('#itemList').hide().fadeIn(1000);
+		</div>').appendTo('#itemList').hide().fadeIn(500);
 	};
 			
 	$(".addButton button").click(function(){
 		var itemName=$(".newName").val();
 		var itemPrice=$(".newPrice").val();
-		if($.isNumeric(itemPrice)===true){
+		if(($.isNumeric(itemPrice)===true) && (itemName!="")){
 			addNewitem(itemName,itemPrice);
 			$(".newItemName").val("");
 			$(".newItemPrice").val("");

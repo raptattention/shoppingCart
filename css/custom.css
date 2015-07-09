@@ -6,6 +6,11 @@ label {
 }
 
 h1 {
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+.itemRow {
 	padding-bottom: 10px;
 }
 
@@ -14,13 +19,50 @@ h1 {
 }
 
 body {
-	background-color: skyblue;
+	background: url(http://previews.123rf.com/images/robynmac/robynmac1311/robynmac131100016/23580061-Italian-food-background-with-vine-tomatoes-basil-spaghetti-mushrooms-olives-parmesan-olive-oil-garli-Stock-Photo.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.page-header{
+	background: url(http://www.saragafood.com/images/Header.jpg) no-repeat center center fixed;
+	width: 100%;
+	background-size: cover;
+	padding-top: 10px;
+	margin: 0;
+	color: white;
+	font-style: italic;
+	height: 100px;
+}
+
+.page-header h1 {
+	font-size: 60px;
+}
+
+.container-fluid{
+	padding:0;
+}
+
+.container {
+	margin-top: 20px;
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 15px;
+	padding-top: 20px;
+	color: white;
 }
 
 #shoppingTotal{
+	color: rgba(10,10,10,1);
 	padding-top: 30px;
 }
 
+.newName, .newPrice, .quantity{
+	color: black;
+}
+
 #total {
-	color: green;
+	color: lightgreen;
 }
